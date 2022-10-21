@@ -1,0 +1,28 @@
+.carousel-item{
+    min-height: 400px;
+    text-align: center;
+  }
+
+  .carousel{
+    flex: 1;
+  }
+
+.carousel-item img {
+    position: absolute;   
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    margin: auto;
+}
+
+.carousel-indicators {
+    margin-bottom: 8px;
+  }
+  
+  .carousel-indicators>li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+
+  

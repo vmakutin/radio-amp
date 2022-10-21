@@ -1,0 +1,70 @@
+divbutton {
+    --main_color: #337AB7;
+    --main-width: 80px;
+    --main-height: 80px;
+    --half-height: 40px;
+    --quote-height: 20px;
+}
+
+.control, 
+.control * {    
+    box-sizing: content-box;
+    letter-spacing: 0;
+}
+.control {
+    border: 11.2px solid var(--main_color);
+    border-radius: 50%;
+    margin: 20px;
+    padding: var(--quote-height);
+    width: var(--main-width);
+    height: var(--main-height);
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+}
+.control,
+.control .left,
+.control .right,
+.control:before {
+    display: inline-block;
+    vertical-align: middle;
+    transition: border 0.2s, width 0.2s, height 0.2s, margin 0.2s;
+}
+.control:before {
+    content: "";
+    height: var(--main-height);
+}
+.control.pause .left,
+.control.pause .right {
+    margin: 0;
+    border-left: 20px solid var(--main_color);
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+    height: 80px;
+}
+.control.pause .left {
+    border-right: 22.4px solid transparent;
+}
+.control.play .left {
+    margin-left: 20px;
+    border-left: 29px solid var(--main_color);
+    border-top: var(--quote-height) solid transparent;
+    border-bottom: var(--quote-height) solid transparent;
+    border-right: 0px solid transparent;
+    height: var(--half-height);
+}
+.control.play .right {
+    margin: 0;
+    border-left: 31px solid var(--main_color);
+    border-top: var(--quote-height) solid transparent;
+    border-bottom: var(--quote-height) solid transparent;
+    height: 0px;
+}
+.control:hover {
+    border-color: #2d6b9f;
+}
+.control:hover .left,
+.control:hover .right {
+    border-left-color: #2d6b9f;
+}

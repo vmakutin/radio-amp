@@ -1,0 +1,19 @@
+{ "radios" : 
+[
+ {
+   "Name" : "Radio BA",
+   "Playback" : "https://air.radioba.by:8443/ba",
+   "Logo" : "./radioba_logo.png"
+ },
+ {
+   "Name" : "Легенды FM",
+   "Playback" : "http://live.legendy.by:8000/legendyfm",
+   "Logo" : "./legendyfm_logo.png"
+ },
+ {
+   "Name" : "Radio Roks",
+   "Playback" : "https://stream.hoster.by/radioroks/roks/icecast.audio",
+   "Logo" : "./radioroks_logo.png"
+ }
+]
+}
