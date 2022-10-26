@@ -5,7 +5,7 @@ import './carousel.css';
 function ControlledCarousel({index, setIndex, radioStations}) {
 
   return (
-    <Carousel activeIndex={index} onSelect={(e)=>setIndex(e)}>
+    <Carousel activeIndex={index} onSelect={(e)=>setIndex(e)} data-bs-interval="false">
       
       {radioStations["radios"].map((radio) => {
         return (
