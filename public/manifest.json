@@ -48,9 +48,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "http://localhost:4004/",
+  "start_url": "https://radio-amp-prod-shortener-ngmqij.mo1.mogenius.io/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
-  "scope": "http://localhost:4004/"
+  "scope": "https://radio-amp-prod-shortener-ngmqij.mo1.mogenius.io/"
 }
