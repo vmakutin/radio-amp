@@ -3,14 +3,6 @@
   "short_name": "Radio Amp",
   "name": "Radio Aggregator Application",
   "description": "",
-  "screenshots": [
-    {
-      "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
-      "sizes": "2880x1800",
-      "type": "image/png",
-      "description": "PWABuilder Home Screen"
-    }
-  ],
   "icons": [
     {
       "src": "favicon.ico",
