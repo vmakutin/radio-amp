@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './button.css';
 import './background.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import radioStations from './stations';
 
@@ -13,11 +14,9 @@ function App() {
   const [audioPlayer] = useState(new Audio());
   const [isActive, setActive] = useState("false");
 
-  console.log(isActive);
   const handleClick= (e)=> {
     
-    console.log(isActive);
-    console.log(audioPlayer.paused);
+    console.log(`audio player state: ${audioPlayer.paused}`);
 
     var playnow = document.getElementById("playnow");
 
@@ -43,15 +42,15 @@ function App() {
 
   return (
     <div className="App">
-      <div class='light x1'></div>
-  <div class='light x2'></div>
-  <div class='light x3'></div>
-  <div class='light x4'></div>
-  <div class='light x5'></div>
-  <div class='light x6'></div>
-  <div class='light x7'></div>
-  <div class='light x8'></div>
-  <div class='light x9'></div>
+      <div className='light x1'></div>
+      <div className='light x2'></div>
+      <div className='light x3'></div>
+      <div className='light x4'></div>
+      <div className='light x5'></div>
+      <div className='light x6'></div>
+      <div className='light x7'></div>
+      <div className='light x8'></div>
+      <div className='light x9'></div>
       <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" widht="50px" height="50px"/>
       </header>
