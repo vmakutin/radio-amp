@@ -11,8 +11,20 @@ import ControlledCarousel from './Carousel';
 
 function App() {
   const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [audioPlayer] = useState(new Audio());
   const [isActive, setActive] = useState("false");
+
+  const onIndexChanged = (newIndex) =>{
+    setIndex(newIndex);
+
+    console.log(`current index: ${currentIndex}`);
+    console.log(`item changed to [${newIndex}]`)
+    console.log(newIndex === currentIndex);
+    console.log(!audioPlayer.paused);
+
+    setActive((newIndex === currentIndex  && !audioPlayer.paused) ? false : true);
+  }
 
   const handleClick= (e)=> {
     
@@ -20,13 +32,21 @@ function App() {
 
     var playnow = document.getElementById("playnow");
 
-    if(!audioPlayer.paused)
+    if(index !== currentIndex)
+    {
+      audioPlayer.pause();  
+    }
+    else if(!audioPlayer.paused)
     {
       console.log("pauser player");
       audioPlayer.pause();
 
       setActive(true);
+      setCurrentIndex(-1);
       playnow.innerText="";
+
+      console.log(`current index: ${currentIndex}`);
+      console.log(`item changed to [${index}]`)
 
       return;
     }
@@ -36,6 +56,10 @@ function App() {
     console.log("play player");
     audioPlayer.play();
     setActive(false);
+    setCurrentIndex(index);
+
+    console.log(`current index: ${currentIndex}`);
+    console.log(`item changed to [${index}]`)
     
     playnow.innerText=radioStations.radios[index].Name;
   }
@@ -56,7 +80,7 @@ function App() {
       </header>
       
       <div className='App_frame'>
-        <ControlledCarousel className="App_frame" id="carousel" index={index} setIndex={setIndex} radioStations={radioStations}/>
+        <ControlledCarousel className="App_frame" id="carousel" index={index} setIndex={onIndexChanged} radioStations={radioStations}/>
       </div>
 
       <footer className="App-footer">

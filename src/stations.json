@@ -1,19 +1,29 @@
-{ "radios" : 
-[
- {
-   "Name" : "Radio BA",
-   "Playback" : "https://air.radioba.by:8443/ba",
-   "Logo" : "./radioba_logo.png"
- },
- {
-   "Name" : "Легенды FM",
-   "Playback" : "http://live.legendy.by:8000/legendyfm",
-   "Logo" : "./legendyfm_logo.png"
- },
- {
-   "Name" : "Radio Roks",
-   "Playback" : "https://stream.hoster.by/radioroks/roks/icecast.audio",
-   "Logo" : "./radioroks_logo.png"
- }
-]
+{
+  "radios": [
+    {
+      "Name": "Radio BA",
+      "Playback": "https://air.radioba.by:8443/ba",
+      "Logo": "./radioba_logo.png"
+    },
+    {
+      "Name": "Легенды FM",
+      "Playback": "http://live.legendy.by:8000/legendyfm",
+      "Logo": "./legendyfm_logo.png"
+    },
+    {
+      "Name": "Radio Roks",
+      "Playback": "https://stream.hoster.by/radioroks/roks/icecast.audio",
+      "Logo": "./radioroks_logo.png"
+    },
+    {
+      "Name": "Unistar",
+      "Playback": "https://unistar.webcaramba.com/unistar_main128.mp3?radiostatistica=site",
+      "Logo": "./unistar_logo.png"
+    },
+    {
+      "Name": "Новое радио",
+      "Playback": "https://live.novoeradio.by:444/live/novoeradio_aac128/icecast.audio",
+      "Logo": "./newradio_logo.png"
+    }
+  ]
 }
