@@ -21,6 +21,11 @@
       "Logo": "./unistar_logo.png"
     },
     {
+      "Name" : "Мелодии века",
+      "Playback" : "https://air.melodiiveka.by:8443/mv",
+      "Logo" :"./melodiiveka_logo.png"
+    },
+    {
       "Name": "Новое радио",
       "Playback": "https://live.novoeradio.by:444/live/novoeradio_aac128/icecast.audio",
       "Logo": "./newradio_logo.png"
