@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './button.css';
@@ -15,20 +15,15 @@ function App() {
   const [audioPlayer] = useState(new Audio());
   const [isActive, setActive] = useState("false");
 
-  const onIndexChanged = (newIndex) =>{
-    setIndex(newIndex);
-
+  function onIndexChanged (newIndex) {
     console.log(`current index: ${currentIndex}`);
-    console.log(`item changed to [${newIndex}]`)
-    console.log(newIndex === currentIndex);
-    console.log(!audioPlayer.paused);
+    console.log(`item ${index} changed to [${newIndex}]`);
 
+    setIndex(newIndex);
     setActive((newIndex === currentIndex  && !audioPlayer.paused) ? false : true);
   }
 
   const handleClick= (e)=> {
-    
-    console.log(`audio player state: ${audioPlayer.paused}`);
 
     var playnow = document.getElementById("playnow");
 
@@ -45,9 +40,6 @@ function App() {
       setCurrentIndex(-1);
       playnow.innerText="";
 
-      console.log(`current index: ${currentIndex}`);
-      console.log(`item changed to [${index}]`)
-
       return;
     }
 
@@ -57,12 +49,31 @@ function App() {
     audioPlayer.play();
     setActive(false);
     setCurrentIndex(index);
-
-    console.log(`current index: ${currentIndex}`);
-    console.log(`item changed to [${index}]`)
     
     playnow.innerText=radioStations.radios[index].Name;
   }
+
+  const keyPress = useCallback(
+    (e) => {
+      var keyName = e.key;
+      console.log(keyName);
+      if (keyName === 'Enter') {
+        handleClick(1);
+        return;
+      }
+      else if(keyName === 'ArrowRight'){
+         document.getElementsByClassName('carousel-control-next')[0].click();
+      }
+      else if(keyName === 'ArrowLeft'){
+         document.getElementsByClassName('carousel-control-prev')[0].click();
+      }
+    }, [index, currentIndex]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyPress);
+    return () => document.removeEventListener("keydown", keyPress);
+  }, [keyPress]);
 
   return (
     <div className="App">
