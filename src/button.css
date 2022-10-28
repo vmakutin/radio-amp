@@ -48,7 +48,7 @@
 }
 .control.play .left {
     margin-left: 20px;
-    border-left: 29px solid var(--main_color);
+    border-left: 28px solid var(--main_color);
     border-top: var(--quote-height) solid transparent;
     border-bottom: var(--quote-height) solid transparent;
     border-right: 0px solid transparent;
