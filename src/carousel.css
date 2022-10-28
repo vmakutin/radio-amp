@@ -10,7 +10,7 @@
 
 .carousel-item img {
   position: absolute;   
-  top: 20%;
+  top: 30%;
   transform: translateY(-50%);
   transform: translateX(-50%);
   margin: auto;
