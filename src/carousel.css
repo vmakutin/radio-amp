@@ -1,5 +1,5 @@
 .carousel-item{
-  min-height: 350px;
+  min-height: 340px;
   text-align: center;
   height: 100%;
 }
@@ -10,7 +10,7 @@
 
 .carousel-item img {
   position: absolute;   
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   transform: translateX(-50%);
   margin: auto;
