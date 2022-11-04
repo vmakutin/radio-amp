@@ -15,6 +15,8 @@ function App() {
   const [audioPlayer] = useState(new Audio());
   const [isActive, setActive] = useState("false");
 
+  console.log(document);
+
   function onIndexChanged (newIndex) {
     console.log(`current index: ${currentIndex}`);
     console.log(`item ${index} changed to [${newIndex}]`);
