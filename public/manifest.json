@@ -41,7 +41,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://radio-amp-prod-rdo-34vh3m.mo2.mogenius.io:80/",
+  "start_url": "https://radio-amp-prod-rdo-34vh3m.mo2.mogenius.io/",
   "display": "standalone",
   "theme_color": "#f69435",
   "background_color": "#ffffff",
