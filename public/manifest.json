@@ -1,5 +1,6 @@
 {
-  "orientation": "landscape-primary",
+  "orientation": "landscape",
+  "app_name": "Radio Aggregator Application",
   "short_name": "Radio Amp",
   "name": "Radio Aggregator Application",
   "description": "",
@@ -42,7 +43,7 @@
   ],
   "start_url": "https://radio-amp-prod-rdo-34vh3m.mo2.mogenius.io:80",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#f69435",
   "background_color": "#ffffff",
   "scope": "https://radio-amp-prod-rdo-34vh3m.mo2.mogenius.io:80"
 }

@@ -44,6 +44,7 @@ function App() {
     }
 
     audioPlayer.src = radioStations.radios[index].Playback;
+//    audioPlayer.preload = "none";
 
     console.log("play player");
     audioPlayer.play();
