@@ -19,8 +19,7 @@ const isLocalhost = Boolean(
 );
 
 export function register(config) {
-  //process.env.NODE_ENV === 'production' &&
-  if ( 'serviceWorker' in navigator) {
+  if ( process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
@@ -65,7 +64,7 @@ function registerValidSW(swUrl, config) {
           return;
         }
         installingWorker.onstatechange = () => {
-          console.log("sw-onstatechange");
+          console.log("sw-onstatechange ");
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
               // At this point, the updated precached content has been fetched,
