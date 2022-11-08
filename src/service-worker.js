@@ -69,4 +69,8 @@ self.addEventListener('message', (event) => {
   }
 });
 
+self.addEventListener('fetch', (e) => {
+  console.log(`[Service Worker] Fetched resource ${e.request.url}`);
+});
+
 // Any other custom service worker logic can go here.
