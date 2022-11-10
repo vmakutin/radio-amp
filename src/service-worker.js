@@ -61,16 +61,36 @@ registerRoute(
   })
 );
 
+self.addEventListener('activate', function(event) {
+  console.log(`Claiming control`);
+  return self.clients.claim();
+});
+
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener('message', (event) => {
+  console.log(`Message event: ${event.data}`);
+
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
 
-self.addEventListener('fetch', (e) => {
-  console.log(`[Service Worker] Fetched resource ${e.request.url}`);
+self.addEventListener('fetch', (event) => {
+  console.log(`[Service Worker] Fetched resource ${event.request.url}`);
+
+  event.respondWith(
+    caches.open('radio-amp-dynamic')
+      .then(cache => cache.match(event.request)
+        .then(response => {
+          const fetchPromise = fetch(event.request)
+            .then(networkResponse => {
+              cache.put(event.request, networkResponse.clone())
+              return networkResponse
+            })
+          return response || fetchPromise
+        }))
+  )
 });
 
 // Any other custom service worker logic can go here.

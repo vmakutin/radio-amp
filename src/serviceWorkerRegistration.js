@@ -55,10 +55,11 @@ export function register(config) {
 }
 
 function registerValidSW(swUrl, config) {
-  navigator.serviceWorker
-    .register(swUrl)
+  console.log("registerValidSW");
+  navigator.serviceWorker.register(swUrl)
     .then((registration) => {
       registration.onupdatefound = () => {
+
         console.log("sw-onupdatefound");
         const installingWorker = registration.installing;
         if (installingWorker == null) {
@@ -89,6 +90,7 @@ function registerValidSW(swUrl, config) {
               // Execute callback
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
+                console.log('Success');
               }
             }
           }

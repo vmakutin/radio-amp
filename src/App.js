@@ -15,11 +15,7 @@ function App() {
   const [audioPlayer] = useState(new Audio());
   const [isActive, setActive] = useState("false");
 
-  console.log(document);
-
   function onIndexChanged (newIndex) {
-    console.log(`current index: ${currentIndex}`);
-    console.log(`item ${index} changed to [${newIndex}]`);
 
     setIndex(newIndex);
     setActive((newIndex === currentIndex  && !audioPlayer.paused) ? false : true);
@@ -46,7 +42,6 @@ function App() {
     }
 
     audioPlayer.src = radioStations.radios[index].Playback;
-//    audioPlayer.preload = "none";
 
     console.log("play player");
     audioPlayer.play();
@@ -59,7 +54,9 @@ function App() {
   const keyPress = useCallback(
     (e) => {
       var keyName = e.key;
+  
       console.log(keyName);
+
       if (keyName === 'Enter') {
         handleClick(1);
         return;
