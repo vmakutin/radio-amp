@@ -1,6 +1,11 @@
 {
   "radios": [
     {
+      "Name": "ANTYRADIO",
+      "Playback": "https://n-22-12.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx",
+      "Logo": "./AntyRadio.png"
+    },
+    {
       "Name": "Radio BA",
       "Playback": "https://air.radioba.by:8443/ba",
       "Logo": "./radioba_logo.png"
