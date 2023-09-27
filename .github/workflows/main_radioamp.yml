@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'RadioAmp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A5E239BB4CF1406B92C393D4D9F4AA84 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7C2CBC1576BD40A48C59CDBAD3398EFD }}
           package: .
